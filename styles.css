@@ -518,3 +518,62 @@ main {
             background-color: var(--accent-color);
             display: block;
         }
+.contact-section{
+    padding: 30px;
+}
+        .contact{
+            position: fixed;
+        
+        }
+        span{
+            color: var(--text-color);
+        }
+        .cont{
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            justify-content: center;
+            justify-items: center;
+        }
+        .contact-form{
+            background-color: var(--primary-color);
+            position: absolute;
+            align-items: center;
+            max-width: max-content;
+        }
+       
+
+        .info-item {
+            margin-bottom: 15px;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .info-item i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+        .info{
+            text-align: center;
+        }
+        .info h1{
+              color: var(--text-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+           
+        }
+ .info h1::after {
+            content: '';
+            position: absolute;
+            
+            bottom: 0;
+            width: 150px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
