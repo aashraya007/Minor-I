@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - My eCommerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .products-header{
+            text-align: center;
+            color: var(--light-text);
+        }
+        
+        .products-grid {
+           
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+
+        .product-card {
+            background: var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .add-to-cart {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        .add-to-cart:hover {
+            background: #c0392b;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="brand-logo">
+                <img src="logo.webp" alt="E-commerce store logo" class="logo-img">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="about1.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                     <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+            <button id="theme-switch">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button>
+        </div>
+     </header>
+    
+
+         <main>
+        <div class="products-header">
+            <h1>DARK FANTASY COLLECTION</h1>
+            <h3>Spring-Summer 2025</h3>
+        </div>
+        <h1>T-SHIRTS</h1>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="slider1.png" alt="Premium wireless headphones with noise cancellation">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">DIVINE WONDER-ORANGE</h3>
+                    <span class="product-price">Rs 7,800</span>
+                   
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="slider2.png" alt="Smart watch with fitness tracking features">
+                </div>
+                <div class="product-info">
+                   <h3 class="product-title">DIVINE WONDER-RED</h3>
+                    <span class="product-price">Rs 7,800</span>
+                  
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="slider3.png" alt="Fast wireless charging pad">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">DIVINE WONDER-RED & WHITE</h3>
+                    <span class="product-price">Rs 7,800</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="slider4.png" alt="Portable bluetooth speaker">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">DIVINE WONDER-PURPLE</h3>
+                    <span class="product-price">Rs 7,800</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+           <h1>HOODIES</h1>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="hood1.jpg" alt="Premium wireless headphones with noise cancellation">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Celestial Blade Oversized Zip-up Hoodie [ECLIPSE]</h3>
+                    <span class="product-price">Rs 14,000</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="hood2.jpg" alt="Smart watch with fitness tracking features">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Celestial Blade Oversized Zip-up Hoodie [NIGHTMARE]</h3>
+                    <span class="product-price">Rs 14,000</span>
+                  
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="hood3.webp" alt="Fast wireless charging pad">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Celestial Blade Oversized Zip-up Hoodie [DUSK]</h3>
+                    <span class="product-price">Rs 14,000</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="hood4.jpg" alt="Portable bluetooth speaker">
+                </div>
+                <div class="product-info">
+                   <h3 class="product-title">Celestial Blade Oversized Zip-up Hoodie [MIDNIGHT]</h3>
+                    <span class="product-price">Rs 14,000</span>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+     <footer>
+        <div class="footer-container">
+           
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="services.html">Shop</a></li>
+                    <li><a href="about1.html">About Us</a></li>
+                    <li><a href="contact1.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> +977 9803 422 032</p>
+                    <p><i class="fas fa-envelope"></i> info@breathedivinity.com</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--light-text); margin-bottom: 1rem;">Subscribe to get updates on new products and offers</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="message" id="newsletterMessage"></div>
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+           
+            <div class="footer-section">
+                 <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <img src="visa.png" alt="Visa credit card icon" />
+                    </div>
+                    <div class="payment-method">
+                        <img src="mastercard.svg" alt="Mastercard credit card icon" />
+                    </div>
+                    
+                </div>
+               
+            </div>
+        
+        </div>
+        <div class="footer-bottom">
+              <p>&copy; 2025 Breathe Divinity. All rights reserved.</p>
+          </div>
+    </footer>
+    <script src="darkmode.js"></script>
+</body>
+</html>

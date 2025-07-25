@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style>
+       
+
+        .slider-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.8s ease-in-out;
+            height: 400px;
+        }
+
+        .slide {
+            min-width: 33.33%;
+            padding: 15px;
+            position: relative;
+        }
+
+        .slide-content {
+            height: 100%;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .slide-content:hover {
+            transform: translateY(-5px);
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .slide-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .slide-content:hover .slide-info {
+            opacity: 1;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 15px;
+        }
+
+        .control-btn {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .control-btn:hover {
+            background-color: #666;
+        }
+
+        .slide-indicators {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .indicator.active {
+            background-color: #333;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .slider {
+                height: 300px;
+            }
+            
+            .slide {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body >
+     <header class="site-header">
+        <div class="header-container">
+            <div class="brand-logo">
+                <img src="logo.webp" alt="E-commerce store logo" class="logo-img">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="services.html">Shop</a></li>
+                    <li><a href="about1.html">About</a></li>
+                    <li><a href="contact1.html">Contact</a></li>
+                     <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <button id="theme-switch">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button>
+        </div>
+     </header>
+    <section class="hero">
+        <h2>WELCOME TO WHERE FASHION MEETS PERFECTION.</h2>
+        <p>Light, comfortable and fashionable</p>
+        <a href="services.html" class="btn">Shop Now</a>
+    </section>
+
+    <main>
+        <center><h1>FEATURED PRODUCTS</h1></center>
+         <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <div class="slide-content">
+                     <img src="slider1.png" alt="this shit hard">
+                    <div class="slide-info">
+                        <h3>DIVINE WONDER- ORANGE</h3>
+                        <p>Breathe Divinty</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                     <img src="slider2.png" alt="cold hard truth">
+                    <div class="slide-info">
+                        <h3>DIVINE WONDER- RED</h3>
+                        <p>Breathe Divinty</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                       <img src="slider3.png" alt="Modern metropolitan skyline at dusk with skyscrapers">
+                    <div class="slide-info">
+                        <h3>DIVINE WONDER- RED&WHITE</h3>
+                        <p>Breathe Divinty</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                   <img src="slider4.png" alt="Dramatic desert landscape with red sand dunes at sunset">
+                    <div class="slide-info">
+                         <h3>DIVINE WONDER-PURPLE</h3>
+                        <p>Breathe Divinty</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                     <img src="slider5.webp" alt="Misty forest trail with sunlight filtering through tall trees">
+                    <div class="slide-info">
+                        <h3>BREATHE DIVINTY</h3>
+                        <p>Breathing divinity</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                   <img src="slider6.webp" alt="Misty forest trail with sunlight filtering through tall trees">
+                    <div class="slide-info">
+                        <h3>BREATHE DIVINTY</h3>
+                        <p>Breathing divinity</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="control-btn prev-btn"><</button>
+        <button class="control-btn next-btn">></button>
+        <button class="control-btn pause-btn">Pause</button>
+    </div>
+
+    <div class="slide-indicators">
+        <div class="indicator active" data-index="0"></div>
+        <div class="indicator" data-index="1"></div>
+    </div>
+
+
+    <div class="categories-section">
+    <h2>CATEGORIES OF THE MONTH</h2>
+    <p></p>
+    <div class="categories-container">
+        <div class="category-item">
+            <img src="shop1.webp" alt="Watches">
+            <h3>T-shirts</h3>
+            <button class="shop-button">Go Shop</button>
+        </div>
+        <div class="category-item">
+            <img src="shop2.webp" alt="Shoes">
+            <h3>Trackpants</h3>
+            <button class="shop-button">Go Shop</button>
+        </div>
+        <div class="category-item">
+            <img src="shop3.jpg" alt="Accessories">
+            <h3>Hoodies</h3>
+            <button class="shop-button">Go Shop</button>
+        </div>
+    </div>
+</div>
+
+   
+    </main>
+
+     <footer>
+        <div class="footer-container">
+           
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="services.html">Shop</a></li>
+                    <li><a href="about1.html">About Us</a></li>
+                    <li><a href="contact1.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> +977 9803 422 032</p>
+                    <p><i class="fas fa-envelope"></i> info@breathedivinity.com</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--light-text); margin-bottom: 1rem;">Subscribe to get updates on new products and offers</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="message" id="newsletterMessage"></div>
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+           
+            <div class="footer-section">
+                 <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <img src="visa.png" alt="Visa credit card icon" />
+                    </div>
+                    <div class="payment-method">
+                        <img src="mastercard.svg" alt="Mastercard credit card icon" />
+                    </div>
+                    
+                </div>
+               
+            </div>
+        
+        </div>
+        <div class="footer-bottom">
+              <p>&copy; 2025 Breathe Divinity. All rights reserved.</p>
+          </div>
+    </footer>
+
+    <script>
+        
+
+
+      
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const pauseBtn = document.querySelector('.pause-btn');
+            const indicators = document.querySelectorAll('.indicator');
+
+            const slideCount = slides.length;
+            const slidesPerView = 3;
+            let currentIndex = 0;
+            let slideWidth = slides[0].offsetWidth;
+            let autoSlideInterval;
+            let isPaused = false;
+
+            // Initialize the slider
+            function initSlider() {
+                slideWidth = slider.offsetWidth / slidesPerView;
+                slides.forEach(slide => {
+                    slide.style.width = `${slideWidth}px`;
+                });
+                
+                // Clone first few slides for infinite effect
+                for (let i = 0; i < slidesPerView; i++) {
+                    const clone = slides[i].cloneNode(true);
+                    slider.appendChild(clone);
+                }
+                
+                updateSlider();
+                startAutoSlide();
+            }
+
+            // Update slider position
+            function updateSlider() {
+                const offset = -currentIndex * slideWidth;
+                slider.style.transform = `translateX(${offset}px)`;
+                
+                // Update indicators
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === Math.floor(currentIndex / slidesPerView));
+                });
+            }
+
+            // Start auto sliding
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(() => {
+                    if (!isPaused) {
+                        nextSlide();
+                    }
+                }, 4000);
+            }
+
+            // Go to next slide
+            function nextSlide() {
+                currentIndex++;
+                if (currentIndex >= slideCount) {
+                    // When we reach the end, quickly reset to start without animation
+                    slider.style.transition = 'none';
+                    currentIndex = 0;
+                    updateSlider();
+                    // Force reflow to make transition work properly
+                    void slider.offsetWidth;
+                    slider.style.transition = 'transform 0.8s ease-in-out';
+                }
+                updateSlider();
+            }
+
+            // Go to previous slide
+            function prevSlide() {
+                currentIndex--;
+                if (currentIndex < 0) {
+                    // When going before start, quickly jump to end without animation
+                    slider.style.transition = 'none';
+                    currentIndex = slideCount - 1;
+                    updateSlider();
+                    // Force reflow to make transition work properly
+                    void slider.offsetWidth;
+                    slider.style.transition = 'transform 0.8s ease-in-out';
+                }
+                updateSlider();
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+
+            pauseBtn.addEventListener('click', function() {
+                isPaused = !isPaused;
+                this.textContent = isPaused ? 'Resume' : 'Pause';
+                if (isPaused) {
+                    clearInterval(autoSlideInterval);
+                } else {
+                    startAutoSlide();
+                }
+            });
+
+            indicators.forEach(indicator => {
+                indicator.addEventListener('click', function() {
+                    const targetIndex = parseInt(this.dataset.index) * slidesPerView;
+                    currentIndex = targetIndex;
+                    updateSlider();
+                });
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                slideWidth = slider.offsetWidth / slidesPerView;
+                slides.forEach(slide => {
+                    slide.style.width = `${slideWidth}px`;
+                });
+                updateSlider();
+            });
+
+            // Initialize on load
+            initSlider();
+
+            // Handle mobile swipe gestures
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            slider.addEventListener('touchstart', function(e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            slider.addEventListener('touchend', function(e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+            
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 30) {
+                    nextSlide();
+                }
+                if (touchEndX > touchStartX + 30) {
+                    prevSlide();
+                }
+            }
+        });
+
+
+   
+
+    </script>
+<script src="script.js"></script>
+<script src="darkmode.js"></script>
+    
+</body>
+</html>

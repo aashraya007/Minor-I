@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - My eCommerce Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         .container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 220px; /* Fixed width for the cards */
+            text-align: center;
+             transition: background-color 0.3s ease, color 0.3s ease;
+             cursor: pointer;
+        }
+
+        .card:hover {
+    background-color: #e0f7fa; /* Change to your desired hover color */
+    color: #00796b; /* Change text color on hover */
+}
+        .icon {
+            font-size: 40px;
+            color: #4CAF50; /* Green color for icons */
+        }
+        .card-title {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+       h2{
+        text-align: center;
+       }
+       p{
+        text-align: center;
+       }
+        .value-container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+        }
+        .value-container h2 {
+            color: #20c997;
+            margin: 0 0 10px;
+        }
+        .value-container p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+       <header class="site-header">
+        <div class="header-container">
+            <div class="brand-logo">
+                <img src="logo.webp" alt="E-commerce store logo" class="logo-img">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                     <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+            <button id="theme-switch">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button>
+        </div>
+     </header>
+
+     <section class="hero1">
+        <h2>WELCOME TO WHERE FASHION MEETS PERFECTION.</h2>
+        <p>Light, comfortable and fashionable</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </section>
+
+   <div class="container">
+        <h1>Our Services</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="service-cards">
+            <div class="card">
+                <div class="icon">🚚</div>
+                <div class="card-title">Delivery Services</div>
+            </div>
+            <div class="card">
+                <div class="icon">🔄</div>
+                <div class="card-title">Shipping & Return</div>
+            </div>
+            <div class="card">
+                <div class="icon">💰</div>
+                <div class="card-title">Promotion</div>
+            </div>
+            <div class="card">
+                <div class="icon">👤</div>
+                <div class="card-title">24 Hours Service</div>
+            </div>
+        </div>
+    </div>
+
+     <h1>SHIPPING/RETURN</h1>
+    <div class="value-container">
+        <h2>PROCESSING DETAILS</h2>
+        <p>Once your order is verified and your payment is approved, processing begins. 1-2 business days is the maximum for all pre-made orders to be shipped</p>
+    </div>
+    <div class="value-container">
+        <h2>SHIPPING AND HANDLING</h2>
+        <p>All orders will be dispatched within 1-2 business days. All orders are also tracked. Breathe Divinity does not take responsibility for any parcels that go missing beyond being shipped. We are not responsible for delays, orders sent to incorrect addresses, lost or stolen. </p>
+    </div>
+    <div class="value-container">
+        <h2>TRACK YOUR ORDER</h2>
+        <p>Download SHOP app for free on the app store to track your order or use the tracking number provided VIA email confirmation to manually track it on the couriers (USPS,FEDEX,UPS) website.</p>
+    </div>
+    <div class="value-container">
+        <h2>******PRE-ORDERS*******</h2>
+        <p>A pre-order is an item available to order but not manufactured yet. Pre-orders will often happen on our site if an item has absurdly high demand. If the item you are ordering is listed as a pre-order, please ALLOW 2-4 WEEKS for the package to ship from site closure. Please do not order a pre-order item if you are not willing to wait the estimated time. All sales are final on pre-orders unless your item is damaged upon receiving. </p>
+    </div>
+
+
+     <footer>
+        <div class="footer-container">
+           
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="services.html">Shop</a></li>
+                    <li><a href="about1.html">About Us</a></li>
+                    <li><a href="contact1.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+    
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+                    <p><i class="fas fa-phone"></i> +977 9803 422 032</p>
+                    <p><i class="fas fa-envelope"></i> info@breathedivinity.com</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p style="color: var(--light-text); margin-bottom: 1rem;">Subscribe to get updates on new products and offers</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="message" id="newsletterMessage"></div>
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+           
+            <div class="footer-section">
+                 <h3>Payment Methods</h3>
+                <div class="payment-methods">
+                    <div class="payment-method">
+                        <img src="visa.png" alt="Visa credit card icon" />
+                    </div>
+                    <div class="payment-method">
+                        <img src="mastercard.svg" alt="Mastercard credit card icon" />
+                    </div>
+                    
+                </div>
+               
+            </div>
+        
+        </div>
+        <div class="footer-bottom">
+              <p>&copy; 2025 Breathe Divinity. All rights reserved.</p>
+          </div>
+    </footer>
+    <script src="darkmode.js"></script>
+</body>
+</html>
