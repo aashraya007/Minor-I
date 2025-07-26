@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - My eCommerce Store</title>
+    <title>Contact Us - Breathe Divinity</title>
     <link rel="stylesheet" href="styles.css">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet"
@@ -32,24 +32,27 @@
   </style>
 </head>
 <body>
-   <header class="site-header">
+     <header class="site-header">
         <div class="header-container">
             <div class="brand-logo">
-                <img src="logo.webp" alt="E-commerce store logo" class="logo-img">
+                <img src="img/logo.webp" alt="E-commerce store logo" class="logo-img">
             </div>
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="services.html">Shop</a></li>
-                    <li><a href="about1.html">About</a></li>
-                    <li><a href="contact1.html">Contact</a></li>
-                     <li><a href="login.html">Login</a></li>
-                </ul>
-            </nav>
-            <button id="theme-switch">
+                    <li><a href="index1.html" class="menu">Home</a></li>
+                    <li><a href="services.html"class="menu">Shop</a></li>
+                    <li><a href="about1.html" class="menu">About</a></li>
+                    <li><a href="contact1.html"class="menu">Contact</a></li>
+                     <li><a href="login.html" class="menu">Login</a></li>
+                 <li><button id="theme-switch" class="menu">
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
       <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-    </button>
+    </button></li>
+</ul>
+               
+            </nav>
+             <button class="mobile-menu-toggle">☰</button>
+            
         </div>
      </header>
     <main>
@@ -57,21 +60,22 @@
          <h1>Contact Information</h1>
          <span>Fill the form or use the contact details below to reach us</span>
   </div>
-    <section class="contact-section">
-        <div class="contact-container">
-          
-            <div class="cont">
+
+   <section class="contact-section">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contact Details</h3>
                 <div class="info-item">
-                <h2 ><i class="fas fa-map-marker-alt"></i>Location</h2>
-                   <h3 >Kathmandu, Nepal</h3>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kathmandu, Nepal</span>
                 </div>
                 <div class="info-item">
-                   <h2><i class="fas fa-phone-alt"></i>Phone</h2> 
-                    <h3><a href="tel:+9779803422032">+977 9803 422 032</a></h3>
+                    <i class="fas fa-phone-alt"></i>
+                    <span><a href="tel:+9779803422032">+977 9803 422 032</a></span>
                 </div>
                 <div class="info-item">
-                    <h2><i class="fas fa-envelope"></i>Email</h2>
-                    <h3><a href="mailto:info@breathedivinity.com">info@breathedivinity.com</a></h3>
+                    <i class="fas fa-envelope"></i>
+                    <span><a href="mailto:info@breathedivinity.com">info@breathedivinity.com</a></span>
                 </div>
             </div>
 
@@ -95,13 +99,15 @@
             </div>
         </div>
     </section>
-       
+    
        <section class="location-map-section">
-    <h3>Our Kathmandu Office Location</h3>
+  <center>  <h2>Kathmandu Store Location</h2></center>
     <div class="map-container">
       <div id="map-small"></div>
     </div>
-  </section>
+  </section> 
+    </section>
+    
     </main>
 
    
@@ -153,10 +159,10 @@
                  <h3>Payment Methods</h3>
                 <div class="payment-methods">
                     <div class="payment-method">
-                        <img src="visa.png" alt="Visa credit card icon" />
+                        <img src="img/visa.png" alt="Visa credit card icon" />
                     </div>
                     <div class="payment-method">
-                        <img src="mastercard.svg" alt="Mastercard credit card icon" />
+                        <img src="img/mastercard.svg" alt="Mastercard credit card icon" />
                     </div>
                     
                 </div>
@@ -172,6 +178,33 @@
 <script src="darkmode.js"></script>
    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
   <script>
+
+      // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Basic validation
+            if (!name || !email || !message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Here you would typically send the data to a server
+            console.log('Form submitted:', {name, email, message});
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            this.reset();
+        });
+
+
     document.addEventListener('DOMContentLoaded', function () {
       const kathmandu = [27.7172, 85.3250];
       const map = L.map('map-small').setView(kathmandu, 14);
