@@ -1,7 +1,7 @@
 
  
  
- const newsletterForm = document.getElementById('newsletterForm');
+            const newsletterForm = document.getElementById('newsletterForm');
             const newsletterMessage = document.getElementById('newsletterMessage');
             
             newsletterForm.addEventListener('submit', function(e) {
@@ -15,7 +15,6 @@
                     return;
                 }
                 
-                // In a real app, you would send this to your server
                 newsletterMessage.textContent = 'Thank you for subscribing! Check your email for confirmation.';
                 newsletterMessage.className = 'message success';
                 newsletterForm.reset();

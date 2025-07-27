@@ -376,17 +376,7 @@ main {
             gap: 2rem;
         }
 
-        .footer-logo {
-            grid-column: 1 / -1;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .footer-logo img {
-            max-width: 120px;
-            height: auto;
-        }
-
+ 
         .footer-section h3 {
             color: var(--text-color);
             margin-bottom: 1rem;
